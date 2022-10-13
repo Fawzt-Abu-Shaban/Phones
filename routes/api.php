@@ -42,7 +42,7 @@ Route::prefix('mobile')->group(function () {
     Route::apiResource('type', TypeController::class);
     Route::apiResource('slider', SliderController::class);
     Route::apiResource('product', ProductController::class);
-    // Route::get('search', [SearchController::class, 'searching']);
+    Route::get('search', [SearchController::class, 'searching']);
 });
 
 Route::prefix('mobile')->middleware(['auth:api', 'verified'])->group(function () {
